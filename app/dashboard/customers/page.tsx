@@ -1,7 +1,7 @@
 import { fetchCustomers, fetchFilteredCustomers } from "@/app/lib/data";
 import Table from "@/app/ui/customers/table";
 import { lusitana } from "@/app/ui/fonts";
-import Pagination from "@/app/ui/customers/pagination";
+import Pagination from "@/app/ui/pagination";
 import Search from "@/app/ui/search";
 import { CustomersTableSkeleton } from "@/app/ui/skeletons";
 import { Metadata } from "next";
