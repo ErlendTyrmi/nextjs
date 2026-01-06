@@ -13,7 +13,6 @@ export default async function CustomersTable({
 }) {
   return (
     <div className="w-full">
-      <Search placeholder="Search customers..." />
       <div className="mt-6 flow-root">
         <div className="overflow-x-auto">
           <div className="inline-block min-w-full align-middle">
