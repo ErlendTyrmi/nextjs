@@ -15,7 +15,6 @@ export function CreateCustomer() {
 }
 
 export function UpdateCustomer({ id }: { id: string }) {
-  console.log(id);
   return (
     <Link
       href={`/dashboard/customers/${id}/edit`}

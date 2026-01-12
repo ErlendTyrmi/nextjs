@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default async function Page(props: { params: Promise<{ id: string }> }) {
-  console.log("Rendering Invoice Edit Page");
   const params = await props.params;
   const id = params.id;
   const [invoice, customers] = await Promise.all([
