@@ -110,7 +110,7 @@ async function seedRevenue() {
 //       seedRevenue(),
 //     ]);
 
-//     return Response.json({ message: 'Database seeded successfully' });
+//     return Response.json({ message: "Database seeded successfully" });
 //   } catch (error) {
 //     return Response.json({ error }, { status: 500 });
 //   }
