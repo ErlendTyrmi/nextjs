@@ -102,7 +102,7 @@ async function seedRevenue() {
 }
 
 // Clear all tables (dev only)
-export async function clearDatabase() {
+async function clearDatabase() {
   await sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
 
   // Truncate tables in order and reset IDs
