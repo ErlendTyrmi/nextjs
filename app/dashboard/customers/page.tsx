@@ -1,8 +1,4 @@
-import {
-  fetchCustomerPageCount,
-  fetchCustomers,
-  fetchFilteredCustomers,
-} from "@/app/lib/data";
+import { fetchCustomerPageCount, fetchCustomers } from "@/app/lib/data";
 import { CreateCustomer } from "@/app/ui/customers/buttons";
 import Table from "@/app/ui/customers/table";
 import { lusitana } from "@/app/ui/fonts";
@@ -37,7 +33,6 @@ export default async function Page(props: {
         <CreateCustomer />
       </div>
       <Suspense key={query + currentPage} fallback={<CustomersTableSkeleton />}>
-        {/* <Table query={query} currentPage={currentPage} /> */}
         <Table currentPage={currentPage} query={query} />
       </Suspense>
       <div className="mt-5 flex w-full justify-center">
