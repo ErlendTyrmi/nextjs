@@ -143,10 +143,7 @@ const CustomerFormSchema = z.object({
   id: z.string(),
   name: z.string().min(1, { message: "Please input a name." }),
   email: z.string().email({ message: "Please input a valid email address." }),
-  image_url: z.string(),
-  // .refine((url) => !url || /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url), {
-  //   message: "URL must point to an image file.",
-  // }),
+  image_url: z.string().min(1, { message: "Please input an image URL." }),
 });
 
 // Use Zod to update the expected types
@@ -228,8 +225,8 @@ export async function updateCustomer(
   try {
     await sql`
       UPDATE customers
-  SET name = ${name}, email = ${email}, image_url = ${image_url}
-  WHERE id = ${id}
+      SET name = ${name}, email = ${email}, image_url = ${image_url}
+      WHERE id = ${id}
     `;
   } catch (error) {
     return { message: "Database Error: Failed to Update Customer." };
